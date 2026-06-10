@@ -1,0 +1,260 @@
+/* =========================================================
+   TALKRALLY THEME.CSS
+   ---------------------------------------------------------
+   Lightweight base styles only.
+   Global design tokens live in theme.json.
+========================================================= */
+
+
+/* =========================================================
+   1. RESET
+========================================================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--wp--preset--color--bg-base);
+  color: var(--wp--preset--color--text-primary);
+  font-family: var(--wp--preset--font-family--sans);
+  font-size: var(--wp--preset--font-size--base);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* =========================================================
+   2. EDITOR PARITY
+========================================================= */
+.editor-styles-wrapper {
+  padding-left: var(--wp--preset--spacing--sm);
+  padding-right: var(--wp--preset--spacing--sm);
+}
+
+
+/* =========================================================
+   3. BASE ELEMENTS
+========================================================= */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: var(--wp--preset--spacing--xl);
+  margin-bottom: var(--wp--preset--spacing--md);
+}
+
+p {
+  margin-top: 0;
+}
+
+strong,
+b {
+  font-weight: var(--wp--custom--weight--bold);
+}
+
+small {
+  font-size: var(--wp--preset--font-size--sm);
+}
+
+
+/* =========================================================
+   4. LINKS AND FOCUS
+========================================================= */
+a {
+  text-underline-offset: 0.16em;
+  transition:
+    color 160ms ease-in-out,
+    background-color 160ms ease-in-out,
+    border-color 160ms ease-in-out;
+}
+
+a:hover {
+  text-decoration-thickness: 0.08em;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+summary:focus-visible,
+.wp-block-button__link:focus-visible {
+  outline: 2px solid var(--wp--preset--color--accent-teal);
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   5. BUTTON NORMALIZATION
+========================================================= */
+button,
+input[type="button"],
+input[type="submit"],
+.wp-block-button__link {
+  border: 0;
+  border-radius: var(--wp--preset--border-radius--pill);
+  cursor: pointer;
+  font: inherit;
+  font-size: var(--wp--preset--font-size--sm);
+  font-weight: var(--wp--custom--weight--semibold);
+  line-height: 1.2;
+  text-decoration: none;
+  transition:
+    color 160ms ease-in-out,
+    background-color 160ms ease-in-out,
+    border-color 160ms ease-in-out,
+    box-shadow 160ms ease-in-out;
+}
+
+.wp-block-button__link:hover {
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   6. FORMS
+========================================================= */
+input,
+textarea,
+select {
+  width: 100%;
+  border: 1px solid var(--wp--preset--color--border-default);
+  border-radius: var(--wp--preset--border-radius--md);
+  background: var(--wp--preset--color--bg-base);
+  color: var(--wp--preset--color--text-primary);
+  font: inherit;
+  font-size: var(--wp--preset--font-size--base);
+  line-height: var(--wp--custom--leading--normal);
+  padding: 0.75rem 1rem;
+  transition:
+    border-color 160ms ease-in-out,
+    box-shadow 160ms ease-in-out;
+}
+
+textarea {
+  min-height: 10rem;
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--wp--preset--color--primary);
+  box-shadow: 0 0 0 3px rgba(42, 25, 125, 0.14);
+  outline: none;
+}
+
+::placeholder {
+  color: var(--wp--preset--color--text-muted);
+  opacity: 1;
+}
+
+
+/* =========================================================
+   7. PUBLICATION DETAILS
+========================================================= */
+.tr-title {
+  color: var(--wp--preset--color--primary);
+  font-family: var(--wp--preset--font-family--serif);
+  font-weight: var(--wp--custom--weight--semibold);
+  line-height: var(--wp--custom--leading--tight);
+  margin-top: 0;
+}
+
+.tr-title--center {
+  text-align: center;
+}
+
+.tr-meta,
+.wp-block-post-date,
+.wp-block-post-author {
+  color: var(--wp--preset--color--text-muted);
+  font-size: var(--wp--preset--font-size--sm);
+}
+
+.wp-block-quote cite,
+.wp-block-pullquote cite {
+  color: var(--wp--preset--color--text-muted);
+  font-family: var(--wp--preset--font-family--sans);
+  font-size: var(--wp--preset--font-size--sm);
+  font-style: normal;
+}
+
+
+/* =========================================================
+   8. LIGHT UTILITIES
+========================================================= */
+.tr-hero-content {
+  background: var(--wp--preset--color--bg-base);
+  border: 1px solid var(--wp--preset--color--border-default);
+  border-radius: var(--wp--preset--border-radius--md);
+}
+.tr-ui-kit-section {
+  margin-bottom: var(--wp--preset--spacing--3xl);
+}
+
+.tr-card {
+  background: var(--wp--preset--color--bg-base);
+  border: 1px solid var(--wp--preset--color--border-default);
+  border-radius: var(--wp--preset--border-radius--md);
+  padding: var(--wp--preset--spacing--lg);
+}
+
+.tr-form-wrapper {
+  display: grid;
+  gap: var(--wp--preset--spacing--md);
+}
+
+.tr-form-wrapper label {
+  font-weight: var(--wp--custom--weight--medium);
+  color: var(--wp--preset--color--text-primary);
+}
+
+.tr-token-grid {
+  display: grid;
+  gap: var(--wp--preset--spacing--sm);
+  grid-template-columns: 50% 50%;
+}
+
+@media (max-width: 768px) {
+  .tr-token-grid {
+    grid-template-columns: 100%;
+  }
+}
+
+.tr-token-grid p,
+.tr-token-grid code {
+  margin: 0;
+}
+
+/* =========================================================
+   9. WORDPRESS NORMALIZATION
+========================================================= */
+.wp-block-group {
+  box-sizing: border-box;
+}
+
+.wp-site-blocks {
+  min-height: 100vh;
+}
