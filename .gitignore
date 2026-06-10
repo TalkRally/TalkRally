@@ -1,0 +1,79 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# WordPress
+wp-config.php
+wp-content/uploads/
+wp-content/cache/
+wp-content/backup-*
+wp-content/plugins/
+/wordpress/
+/wp/
+
+# WordPress multisite
+/sites/*/wp-config.php
+
+# WordPress Single Sign-On
+/wp-content/plugins/wordpress-sso/
+
+# wp-cli local config
+wp-cli-local.yml
+
+# Local development
+.env
+.env.local
+.env.*.local
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Build artifacts
+dist/
+build/
+*.map
+*.min.js
+*.min.css
+
+# Composer
+vendor/
+composer.lock
+
+# Testing
+coverage/
+.phpunit.result.cache
+
+# OS
+.AppleDouble
+.LSOverride
+._*
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# Theme-specific
+screenshot-old.png
+*.pot
+languages/*.po
+languages/*.mo
