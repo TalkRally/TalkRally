@@ -1,0 +1,47 @@
+/*
+Theme Name:       TalkRally
+Theme URI:        https://talkrally.com
+Author:           TalkRally
+Author URI:       https://talkrally.com
+Description:      A performance-first, pattern-driven block theme built for scalable editorial platforms. Clean design system with full site editing, custom tokens, and consistent typography & spacing.
+Version:          1.0.0
+Requires at least: 6.5
+Tested up to:     6.7
+Requires PHP:     8.0
+License:          GNU General Public License v2 or later
+License URI:      https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:      talkrally
+Domain Path:      /languages
+Tags:             block-theme, full-site-editing, custom-colors, custom-spacing, custom-typography, editor-style, one-column, accessibility-ready, translation-ready
+
+This theme is a modern block theme built from the ground up with a strong emphasis on design tokens, pattern-first workflows, and performance.
+*/
+
+/* ==============================================================
+   FALLBACK STYLES FOR CLASSIC BLOCKS & LEGACY SUPPORT
+   ============================================================== */
+
+/* Ensure classic editor elements respect theme tokens */
+.wp-block-legacy__legacy .wp-block-button__link {
+	background-color: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--button-text);
+	border-radius: var(--wp--preset--border-radius--pill);
+	padding: 0.75rem 1.25rem;
+}
+
+/* Fallback for several common legacy block wrapper types */
+.wp-block-button .wp-block-button__link,
+.wp-block-group,
+.wp-block-cover,
+.wp-block-columns,
+.wp-block-column,
+.wp-block-media-text {
+	line-height: var(--wp--custom--leading--normal);
+}
+
+/* ==============================================================
+   ADDITIONAL CUSTOM STYLES
+   ============================================================== */
+
+/* Add any remaining component or pattern-specific overrides here */
+/* Global base styles should remain in theme.json for consistency */
